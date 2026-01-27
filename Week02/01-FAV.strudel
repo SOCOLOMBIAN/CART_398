@@ -16,6 +16,8 @@ $: stack(
   
   s("~ clap ~ [clap clap]").gain(0.6).room(0.15).pan(0.65),
 
-  s("[jazz:8]").delayfeedback(0.9).gain(0.85)
+  s("[jazz:8]").delayfeedback(0.9).gain(0.85),
+
+  s("bd*4, hh*8, cp ~ cp ~").speed("[1 1.2]").room(0.3).gain(0.8)
 )
 
