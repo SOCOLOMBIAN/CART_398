@@ -2,3 +2,9 @@
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @bsophie Sanchez
 // @date Jan 26, 2026
+
+$: stack(
+  note("c2 ~ c2 g2").s("sawtooth").lpf(600).room(0.4).gain(0.8),
+  s("bd*4, hh*8, cp ~ cp ~").speed("[1 1.2]").room(0.3).gain(0.8)
+  
+)
