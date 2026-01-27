@@ -3,5 +3,7 @@
 // @bsophie Sanchez
 // @date Jan 26, 2026
 
-$: s("shaker*16").speed("[0.9 1 1.1 1.2]").gain("[0.4 0.6 0.5 0.7]")
-$: note("c2 ~ c2 g2").s("sawtooth").lpf(600).room(0.4).gain(0.8)
+$: stack(
+  s("shaker*16").speed("[0.9 1 1.1 1.2]").gain("[0.4 0.6 0.5 0.7]"),
+  note("c2 ~ c2 g2").s("sine").lpf(600).room(0.4).gain(0.8)
+)
