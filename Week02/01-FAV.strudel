@@ -1,1 +1,14 @@
+samples({
+  con: 'https://cdn.freesound.org/previews/735/735624_92171-hq.mp3'
+})
+
+$: stack(
+  s("con").room(0.2).size(0.9).delayfeedback(0.6).gain(0.4),
+  
+  s("bd [~ bd:1] ~ bd").gain(0.5).lpf(700),
+  
+  s("~ clap ~ [clap clap]").gain(0.6).room(0.15).pan(0.65),
+
+  s("[jazz:8]").delayfeedback(0.9).gain(0.85)
+)
 
