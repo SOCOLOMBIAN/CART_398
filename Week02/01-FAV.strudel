@@ -1,3 +1,10 @@
+
+// @title W02-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @bsophie Sanchez
+// @date Jan 26, 2026
+
+
 samples({
   con: 'https://cdn.freesound.org/previews/735/735624_92171-hq.mp3'
 })
