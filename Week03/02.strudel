@@ -1,0 +1,11 @@
+// @title W02-02
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @sophie Sanchez
+// @date Jan 27, 2026
+
+
+samples({
+  con:'https://cdn.freesound.org/previews/663/663170_14510673-lq.mp3'
+})
+
+$: s("con").slice(8,"2 1 2 2").room(0.2).size(0.9).delayfeedback(0.6).gain(0.4)
