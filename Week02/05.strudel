@@ -2,3 +2,10 @@
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @bsophie Sanchez
 // @date Jan 26, 2026
+
+$: stack(
+  s("tabla*8").speed("[1 1.2 0.9 1.1]").gain("[0.6 0.8 0.7 0.9]"),
+  s("bd*4, hh*16").speed("[1 1.1]").gain(0.7),
+  s("808 ~ 808 [808 808]").speed("[0.8 1]").lpf(600).gain(0.8),
+  s("space*2").speed(0.5).room(0.8).gain(0.4)
+)
