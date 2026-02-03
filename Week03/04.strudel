@@ -1,1 +1,10 @@
+// @title W03-04
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @sophie Sanchez
+// @date Feb 02, 2026
 
+$: stack(
+  s("db*8, sd(5,8)").bank("RhythmBox").gain(0.8),
+  s("<hh oh>*8").delay(0.2).delaytime(0.125).chord("<C <Fm Db>>").voicing(),
+  s("~ cp ~ cp").room(0.9)
+)
