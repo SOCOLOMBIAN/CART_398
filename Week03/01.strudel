@@ -2,3 +2,8 @@
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @sophie Sanchez
 // @date Feb 02, 2026
+
+$: stack(
+  s("bd bd bd *2 ").bank("RhythmAce").dist(3),
+  s("<rim hh bd hh>*2")
+)
