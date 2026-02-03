@@ -2,3 +2,18 @@
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @sophie Sanchez
 // @date Feb 02, 2026
+
+
+samples({
+  continue: 'https://cdn.freesound.org/previews/539/539815_2282212-lq.mp3'
+})
+
+$: stack(
+note("<g3 g3>*8").s("triangle"),
+note("<g2 g2 c2 c2>").s("continue") 
+    .lpf(1200)
+    .room(0.3)
+    .gain(0.5),
+  s("bd ~ ~ ~ bd ~ cp ~").room(0.4).gain(0.7),
+  s("hh ~ hh ~ hh ~ hh ~").gain(0.4).hpf(8000).delay(0.2)
+  )
