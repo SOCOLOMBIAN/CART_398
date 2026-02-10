@@ -12,3 +12,4 @@ cps(130/60)
 stack(
   s("[bd(3,8) [sn(4,16) rim(2,8)]], [sound:4*16?0.2|sound:4*16?0.7]")
 ).every( 3, x => x.late(7))
+
