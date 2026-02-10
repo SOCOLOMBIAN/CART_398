@@ -1,14 +1,1 @@
-// @title W04-01
-// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
-// @sophie Sanchez
-// @date Feb 09, 2026
 
-samples({
-  sound: 'https://cdn.freesound.org/previews/113/113054_8043-lq.mp3',
-})
-
-cps(130/60)
-
-stack(
-  s("[bd(3,8) [sn(4,16) rim(2,8)]], [sound:4*16?0.2|sound:4*16?0.7]")
-).every( 3, x => x.late(7))
