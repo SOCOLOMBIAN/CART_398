@@ -1,1 +1,18 @@
 
+
+
+
+
+
+
+samples({
+  valle: 'https://cdn.freesound.org/previews/513/513165_9220981-lq.mp3',
+  github: 'github:tidalcycles/dirt-samples'
+})
+
+
+stack(
+  s("birds:0 birds:1 ~ bd:0 ~ sd:1").speed("<1 2 3>"),
+  s("valle")
+).cpm(80)
+
