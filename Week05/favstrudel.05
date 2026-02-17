@@ -1,0 +1,38 @@
+// @title W05-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @sophie Sanchez
+// @date Feb 16, 2026
+
+
+samples({
+  vida: 'https://cdn.freesound.org/previews/471/471327_9246036-lq.mp3'
+})
+
+samples('github:tidalcycles/dirt-samples')
+
+$: stack(
+  s("vida*3")
+    .gain("<4 5 7 6>")
+    .speed("<0.5 0.7 1.5 2>")
+    .room(0.9).size(0.9)
+    .delay(0.6).delayfeedback(0.7),
+  s("~ breath ~").gain(0.3).lpf(600),
+  s("wind").slow(4).gain(0.2),
+  s("~ ~ space:2 ~").slow(2).gain(0.25)
+).cpm(60)
+
+$: stack(
+  s("bd ~ bd ~db *2").gain(0.6),
+  s("~ tabla:1 ~ tabla:2").gain(0.4),
+  s("hand:1 ~ ~ hand:3").gain(0.3)
+).cpm(90)
+
+$: stack(
+  note("c3 ~ eb3 ~ g3 ~ ~ c4").sound("piano").slow(4).gain(0.5).room(0.8),
+  note("c2").sound("subbass").slow(8).gain(0.4)
+).cpm(60)
+
+$: stack(
+  s("crow ~ ~ ~").slow(8).gain(0.35).speed("<0.8 1 1.2>"),
+  s("~ ~ glitch:2 ~").gain(0.25).lpf(400)
+).cpm(60)
