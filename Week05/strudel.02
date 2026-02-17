@@ -1,0 +1,9 @@
+
+
+
+
+samples('github:SOCOLOMBIAN/samples')
+
+$: sound("short* 2").speed(sine.fast(2))
+.sound("short* 2").lpf(50).vowel("<a  e  i  <o u>>").slice(2,"1 2 3")
+.room(0.5).size(5)
