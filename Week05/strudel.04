@@ -1,1 +1,23 @@
+// @title W05-04
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @sophie Sanchez
+// @date Feb 16, 2026
+
+samples({
+  valle: 'https://cdn.freesound.org/previews/513/513165_9220981-lq.mp3'
+})
+
+samples('github:tidalcycles/dirt-samples')
+
+stack(
+  s("birds:0 birds:1 ~ bd:0 ~ sd:1").speed("<1 2 3>"),
+  s("valle").lpf(200),
+  s("bd bd").bank("gm_choir_aahs").delay(".5")
+).cpm(80)
+.attack(0.25)
+.decay(0.25)
+.sustain(.25)
+.release(.3)
+ 
+
 
