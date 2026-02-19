@@ -1,0 +1,17 @@
+
+
+
+setcps(90)
+
+let sec1 = stack(
+  
+   n(" 5, 3  [56 45]  [52 54]  4, 7   ").sound("gm_voice_oohs").fast(2),
+   s("< bd hh sd hh *6> ! ").speed("1 2 4 2 1 -2").color("blue")
+   ._punchcard()
+   .delayt(0.44)
+
+   
+ $: arrange(
+     [3, sec1]
+
+  
