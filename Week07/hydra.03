@@ -1,0 +1,18 @@
+// @title W07-03
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @sophie Sanchez
+// @date March 04, 2026
+
+
+
+
+ noise(10, () => time * 0.19)
+ .color( 0.7, 0.3, 20)
+ .contrast(1.4)
+   .modulate(
+   noise(0.2, () => time * 0.09),
+   0.4
+ )
+ .rotate(() => time * 0.05)
+ .colorama(0.9)
+ .out()
