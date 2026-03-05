@@ -1,0 +1,14 @@
+
+
+// @title W07-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @sophie Sanchez
+// @date March 04, 2026
+
+
+noise(8.3, 1.2)
+  .color(0.2, 0.4, 2.0)
+  .luma(0.4, 0.07)
+  .blend(o0, 0.80)
+  .brightness(0.01)
+  .out(o0)
