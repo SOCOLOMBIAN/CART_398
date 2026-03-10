@@ -1,1 +1,14 @@
 
+
+// @title W08-03
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @sophie Sanchez
+// @date March 09, 2026
+
+
+
+osc(30, 0.6, 1.5)
+  .kaleid(6)
+  .rotate(() => time * 0.2)
+  .color(6, 0.5, 0.5)
+  .out()
