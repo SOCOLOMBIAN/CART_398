@@ -1,0 +1,24 @@
+
+
+
+
+
+samples('github:tidalcycles/Dirt-Samples')
+
+stack(
+
+  sound("bd ~ ~ bd ~ ~ sd ~")
+    .bank("RolandTR808"),
+
+
+  sound("hh ~ hh ~ hh ~ hh hh")
+    .bank("RolandTR808")
+    .gain(0.6),
+
+
+  note("c2 ~ f2 ~ g2 ~ eb2 ~")
+    .sound("bass3")
+    .lpf(600)
+    .gain(0.9)
+)
+.cpm(110)
