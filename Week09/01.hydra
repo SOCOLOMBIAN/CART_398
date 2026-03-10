@@ -1,0 +1,10 @@
+
+
+
+
+osc(30, 0.6, 1.5)
+  .kaleid(20)
+  .rotate(() => time * 0.2)
+  .color(6, 0.5, 0.5)
+  .invert(9)
+  .out()
