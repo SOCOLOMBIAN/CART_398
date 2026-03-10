@@ -1,0 +1,23 @@
+
+// @title W09-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @sophie Sanchez
+// @date March 09, 2026
+
+samples('github:tidalcycles/Dirt-Samples')
+
+stack(
+
+  note("<[c4,eb4,g4] [f4,ab4,c5] [g4,bb4,d5]>")
+    .sound("piano")
+    .slow(2)
+    .gain(0.6)
+    .delay(0.3),
+
+  note("c5 eb5 g5 bb5 c6 bb5 g5 eb5")
+    .sound("supersaw")
+    .lpf(sine.range(400, 2000).slow(4))
+    .gain(0.3)
+    .fast(2)
+)
+.cpm(120)
