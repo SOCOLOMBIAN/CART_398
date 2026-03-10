@@ -1,0 +1,20 @@
+
+// @title W08-05
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @sophie Sanchez
+// @date March 09, 2026
+
+
+
+samples('github:tidalcycles/Dirt-Samples')
+
+stack(
+  sound("bd ~ ~ bd ~ ~ bd ~").bank("RolandTR808"),
+  sound("~ ~ sd ~ ~ ~ sd ~").bank("RolandTR808").room(0.2),
+  sound("hh*8").gain(rand.range(0.2, 0.6)),
+
+  note("a1 ~ ~ c2 ~ e2 ~ ~")
+    .sound("bass3").lpf(600)
+)
+.cpm(90)
+
