@@ -1,5 +1,8 @@
 
-
+// @title W09-01
+// @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+// @sophie Sanchez
+// @date March 16, 2026
 
 
 osc(30, 0.6, 1.5)
