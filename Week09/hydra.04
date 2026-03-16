@@ -2,3 +2,17 @@
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @sophie Sanchez
 // @date March 16, 2026
+
+
+pattern = () => osc(20, 0).kaleid(12).scale(1, 0.4)
+
+osc().modulateRotate(o0, 0.5).out()
+osc(2, 0.3, 0.3).diff(o3, 3).out(o1)
+osc(3, 0.3, 33).modulateKaleid(o3, 3).diff(o0).out(o2)
+src(o0, 3).mult(o1, 3).kaleid(3).out(o3)
+
+src(o2)
+  .add(pattern().scrollX(0.1, 0.01).mult(pattern()), 0.4)
+  .out()
+
+render()
