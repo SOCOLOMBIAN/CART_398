@@ -2,3 +2,48 @@
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @sophie Sanchez
 // @date March 16, 2026
+
+
+samples('github:tidalcycles/dirt-samples')
+
+
+
+let sec1 = stack(
+  n("[b4 c5 d5 e5]").sound("gm_choir_aahs")   
+    .lpf(sine.range(600, 2000).slow(8))
+    .slow(2).gain(0.7),
+  n("b3 ~ e4 ~").sound("gm_pad_warm")        
+    .slow(2).gain(0.4)
+).room(0.7)
+
+
+let sec2 = stack(
+  n("b4 ~ [c5 d5] ~ e5 ~ [d5 c5] b4").sound("gm_fx_echoes")  
+    .lpf(sine.range(400, 1600).slow(12))
+    .slow(3).gain(0.7),
+  n("b3 ~ e4 ~ g4 ~ e4 ~").sound("gm_fx_echoes")           
+    .slow(3).gain(0.35),
+  n("b2 ~ ~ b2").sound("gm_pad_warm").slow(2).gain(0.35)       
+).room(0.85).gain(0.8)
+
+
+let sec3 = stack(
+  n("5 3 [5 6] 7").sound("gm_pad_halo").slow(2)
+    .room(0.7).gain(0.6),
+  n("[b4 c5 d5 e5]").sound("gm_blown_bottle")
+    .lpf(1200).slow(2).gain(0.5)
+).room(0.5)
+
+
+let beat = stack(
+  s("bd ~ ~ bd ~  ~ bd ~").gain(0.8),
+  s("~ ~ sd ~ ~ ~ sd ~").gain(0.7).lpf(100),
+  s("hh*8").gain(0.3)
+)
+
+$: arrange(
+  [2, sec2],   
+  [2, stack(sec1, beat)], 
+  [3, stack(sec3, beat)],  
+  [2, sec2]    
+)
