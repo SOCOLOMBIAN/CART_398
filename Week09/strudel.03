@@ -2,3 +2,27 @@
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @sophie Sanchez
 // @date March 16, 2026
+
+
+samples('github:tidalcycles/dirt-samples')
+
+let beat = stack(
+  s("bd(3,8)").gain(0.8),
+  s("sd(2,8,3)").gain(0.65),
+  s("hh(5,8)").gain(0.22)
+).room(0.15)
+
+let mel = stack(
+  n("<e4 g4 a4 [b4 c5]> <g4 [a4 b4] c5 e5>").sound("erk")
+    .clip(0.5).slow(2).gain(0.7).room(0.5)
+    .every(3, x => x.speed(1.5))
+    .every(4, x => x.rev()),
+  n("<e3 ~ a3 ~> <a3 ~ e4 ~>").sound("gm_vibraphone")
+    .slow(2).gain(0.4)
+).room(0.6)
+
+$: arrange(
+  [2, mel],
+  [3, stack(mel, beat)],
+  [1, mel]
+)
