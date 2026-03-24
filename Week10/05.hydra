@@ -2,3 +2,18 @@
 // @license CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
 // @sophie Sanchez
 // @date March 23, 2026
+
+
+voronoi(13, 0.8, 2)
+  .pixelate(11, 26)
+  .thresh(0.4, 0.01)
+  .modulateScale(
+    osc(4, 0.1, 9)
+      .kaleid(20)
+      .rotate(() => time * 0.15),
+    () => Math.sin(time * 0.6) * 0.3 + 1.2
+  )
+  .rotate(() => time * 0.05)
+  .color(13, 6, 0.1)
+  .contrast(1.8)
+  .out(o0)
