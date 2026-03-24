@@ -1,1 +1,16 @@
 
+
+
+
+$: stack(
+  note("e1 ~ e1 e1 ~ g1 ~ ~, ~ ~ a1 ~ ~ ~")
+    .sound("pipeorgan_loud")
+    .lpf(perlin.range(280,520).slow(4))
+    .resonance(14).shape(0.35)
+    .gain(0.9).attack(0.01).release(0.18),
+  note("e2 ~ e2 e2 ~ g2 ~ ~, ~ ~ a2 ~ ~ ~")
+    .sound("pipeorgan_loud")
+    .lpf(800)
+    .shape(0.2)
+    .gain(0.45).attack(0.05).release(0.25)
+)
